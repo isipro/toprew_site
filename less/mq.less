@@ -1,0 +1,96 @@
+//Media Queries
+
+// Mobile
+@media (max-width: @mobile-bp) {
+    html {
+        background: #808080;
+    }
+    //temporary
+
+    .wrapper {
+        width: @mobile-size;
+        margin: auto;
+    }
+
+    .logo_container {
+        width: (@logo-container-width-mobile);
+        .dev_border;
+        margin: auto;
+        float: none;
+        height: @logo-container-height-mobile;
+    }
+
+    .random_offers, .last_seen, .menu {
+        display: none;
+    }
+}
+
+//Tablet
+
+@media (min-width: @mobile-bp) {
+    .wrapper {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    #mobile_menu_button {
+        display: none;
+    }
+
+    .menu {
+        /*>li{float: left;}*/
+    }
+
+    .content {
+        width: 66%;
+    }
+
+    .sidebar {
+        width: 33%;
+    }
+
+    aside {
+        margin-top: @content-margin-top;
+
+        .subscribe {
+            min-height: 45px;
+
+            span {
+                line-height: 45px;
+            }
+        }
+
+        .search {
+            min-height: 45px;
+        }
+
+        .random_offers {
+            min-height: 155px;
+        }
+
+        .last_seen {
+            min-height: 155px;
+        }
+
+        .ads {
+            min-height: 33%;
+        }
+    }
+}
+
+
+// Desktop
+@media (min-width: @desktop-bp) {
+
+    .logo_container {
+        .dev_border;
+        width: @logo-container-width-desktop;
+        height: @logo-container-height-desktop;
+        float: left;
+    }
+
+    .menu {
+        width: @menu-width-desktop;
+    }
+}

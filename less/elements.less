@@ -1,0 +1,99 @@
+//elements
+
+//Offers Section
+
+section.offers {
+    margin-top: @content-margin-top;
+}
+
+    section.offers > section {
+        position: relative;
+        min-height: 125px;
+        .offers_border;
+        .offers_margin;
+    }
+
+        section.offers > section > button {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+
+//Sidebar
+
+aside {
+
+    div {
+        .aside_border;
+        .offers_margin;
+        min-height: 35px;
+        text-align: center;
+    }
+}
+
+//Menu
+
+nav.navigation{
+
+    //.dev_border;
+}
+.logo_container {
+    .dev_border;
+    width: @logo-container-width-tablet;
+    height: @logo-container-height-tablet;
+    float: left;
+}
+
+.menu {
+    .dev_border;
+    list-style-type: none;
+    width: @menu-width-tablet;
+    float: right;
+    margin-right: @menu-margin-right;
+    margin-top: 1px;
+        >li {
+            display: inline-block;
+            float: right;
+            width: @menu-button-width;
+            height: @menu-button-height;
+            .dev_border;
+            text-align: center;
+
+            >a{
+                display: inline-block;
+                margin: auto;
+                width: (@menu-button-width - 2);
+                line-height: @menu-button-height;
+            }
+        }
+}
+
+//Footer
+
+footer {
+    min-height: @foot-height;
+    .offers_border;
+
+    p {
+        text-align: center;
+    }
+}
+
+
+// Mobile Menu
+#mobile_menu_button {
+    position: relative;
+    top: 10px;
+    color: @dark-grey;
+    background-color: @orange;
+    border: 1px solid @mobile-menu-border;
+    .offers_margin;
+    height: @mobile-menu-height;
+    z-index: 1;
+
+    a {
+        line-height: 35px;
+        padding: 10px 200px;
+    }
+}
