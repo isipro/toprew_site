@@ -45,13 +45,16 @@ aside div {
 }
 .logo_container {
   border: 1px solid #633030;
+  width: 224px;
   width: 22.4rem;
+  height: 128px;
   height: 12.8rem;
   float: left;
 }
 .menu {
   border: 1px solid #633030;
   list-style-type: none;
+  width: 426px;
   width: 42.6rem;
   float: right;
   margin-right: 1.2rem;
@@ -60,7 +63,9 @@ aside div {
 .menu > li {
   display: inline-block;
   float: right;
+  width: 96px;
   width: 9.6rem;
+  height: 35px;
   height: 3.5rem;
   border: 1px solid #633030;
   text-align: center;
@@ -69,8 +74,9 @@ aside div {
 .menu > li > a {
   display: inline-block;
   margin: auto;
+  width: 76px;
   width: 7.6rem;
-  line-height: 3.5rem;
+  line-height: 3.5;
 }
 footer {
   min-height: 5.5rem;
@@ -86,6 +92,7 @@ footer p {
   background-color: #ff9900;
   border: 1px solid #995c00;
   margin: 5px;
+  height: 35px;
   height: 3.5rem;
   /*.element_height(@mobile-menu-height);*/
 
@@ -132,11 +139,15 @@ footer p {
     border: 1px solid #633030;
     margin: auto;
     float: none;
+    height: 79px;
     height: 7.9rem;
   }
   .random_offers,
   .last_seen,
   .menu {
+    display: none;
+  }
+  .breadcrumb {
     display: none;
   }
 }
@@ -184,11 +195,14 @@ footer p {
 @media (min-width: 1024px) {
   .logo_container {
     border: 1px solid #633030;
+    width: 105px;
     width: 10.5rem;
+    height: 70px;
     height: 7rem;
     float: left;
   }
   .menu {
+    width: 832px;
     width: 83.2rem;
   }
 }

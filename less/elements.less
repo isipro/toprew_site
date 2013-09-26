@@ -33,6 +33,7 @@ section.offers {
 aside {
 
     div {
+
         .aside_border;
         .offers_margin;
         min-height: 35px;
@@ -48,30 +49,30 @@ nav.navigation{
 }
 .logo_container {
     .dev_border;
-    width: @logo-container-width-tablet;
-    height: @logo-container-height-tablet;
+    .element_width(@logo-container-width-tablet);
+    .element_height(@logo-container-height-tablet);
     float: left;
 }
 
 .menu {
     .dev_border;
     list-style-type: none;
-    width: @menu-width-tablet;
+    .element_width(@menu-width-tablet);
     float: right;
     margin-right: @menu-margin-right;
     margin-top: 1px;
         >li {
             display: inline-block;
             float: right;
-            width: @menu-button-width;
-            height: @menu-button-height;
+            .element_width(@menu-button-width);
+            .element_height(@menu-button-height);
             .dev_border;
             text-align: center;
             margin-left: 5px;
             >a{
                 display: inline-block;
                 margin: auto;
-                width: (@menu-button-width - 2);
+                .element_width(@menu-button-width - 2);
                 line-height: @menu-button-height;
             }
         }
@@ -97,7 +98,7 @@ footer {
     background-color: @orange;
     border: 1px solid @mobile-menu-border;
     .offers_margin;
-    height: @mobile-menu-height;
+    .element_height(@mobile-menu-height);
     /*.element_height(@mobile-menu-height);*/
     z-index: 1;
 

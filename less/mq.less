@@ -13,14 +13,18 @@
     }
 
     .logo_container {
-        width: (@logo-container-width-mobile);
+        width: @logo-container-width-mobile;
         .dev_border;
         margin: auto;
         float: none;
-        height: @logo-container-height-mobile;
+        .element_height(@logo-container-height-mobile);
     }
 
     .random_offers, .last_seen, .menu {
+        display: none;
+    }
+
+    .breadcrumb{
         display: none;
     }
 }
@@ -85,12 +89,12 @@
 
     .logo_container {
         .dev_border;
-        width: @logo-container-width-desktop;
-        height: @logo-container-height-desktop;
+        .element_width(@logo-container-width-desktop);
+        .element_height(@logo-container-height-desktop);
         float: left;
     }
 
     .menu {
-        width: @menu-width-desktop;
+        .element_width(@menu-width-desktop);
     }
 }
