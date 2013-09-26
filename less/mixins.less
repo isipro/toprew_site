@@ -1,6 +1,6 @@
-//Mixins 
+//Mixins
 
-.dev_border{
+.dev_border {
     border: 1px solid #633030;
 }
 //Offers element border - General border
@@ -8,12 +8,27 @@
     border: 1px solid @dark-grey;
 }
 
-.offers_margin{
-    margin: 5px;    
+.offers_margin {
+    margin: 5px;
 }
 
 //Aside border
-.aside_border{
+.aside_border {
     border: 1px solid @blue;
 }
 
+//Height
+.element_height(@sizeValue) {
+    @remValue: @sizeValue;
+    @pxValue: (@sizeValue * 10);
+    height: ~"@{pxValue}px";
+    height: ~"@{remValue}rem";
+}
+
+//Font Size
+.font_size(@sizeValue) {
+    @remValue: @sizeValue;
+    @pxValue: (@sizeValue * 10);
+    font-size: ~"@{pxValue}px";
+    font-size: ~"@{remValue}rem";
+}

@@ -1,4 +1,11 @@
-﻿//BreakPoints
+﻿//Setting REM units
+
+
+//Gutter
+@gutter: 2rem;
+@default-size: 1rem;
+
+//BreakPoints
 @mobile-bp: 769px;
 @desktop-bp: 1024px;
 @largescreen-bp: 1200px;
@@ -8,19 +15,19 @@
 @desktop-size: 1000px;
 @largescreen-size: 1200px;
 //  >> Logo Container Mobile
-@logo-container-height-mobile: 79px;
+@logo-container-height-mobile: @default-size*7.9;
 @logo-container-width-mobile: (@mobile-size - 4); 
 //  >> Logo Container Tablet
-@logo-container-height-tablet: 128px;
-@logo-container-width-tablet: 224px;
+@logo-container-height-tablet: @default-size*12.8;
+@logo-container-width-tablet: @default-size*22.4;
 //  >> Logo Container Desktop
-@logo-container-height-desktop: 70px; 
-@logo-container-width-desktop: 105px;
+@logo-container-height-desktop: @default-size*7.0; 
+@logo-container-width-desktop: @default-size*10.5;
  
-@menu-width-tablet: 426px;
-@menu-width-desktop: 832px;
-@menu-button-width: (@menu-width-desktop/8 - 2);
-@menu-button-height: 35px; 
+@menu-width-tablet: @default-size*42.6;
+@menu-width-desktop: @default-size*83.2;
+@menu-button-width: @default-size*9.6;
+@menu-button-height: @default-size*3.5; 
 
 //Colors
 @orange: rgb(255,153,0);        //Hex: #FF9900, RGB: 255,153,0
@@ -33,16 +40,19 @@
 @mobile-menu-border: darken(@orange, 20%);
 
 //Elements Height
-@mobile-menu-height: 35px;
-@foot-height: 55px;
+@mobile-menu-height: @default-size*3.5;
+@foot-height: @default-size*5.5;
 
 //Margins
-@content-margin-top: 10px;
-@menu-margin-right: 12px;
-@menu-margin-left-tablet: 20px;
-@menu-margin-right-desktop: 12px;
-@menu-margin-top-desktop: -10px;
+
+@content-margin-top: @default-size;
+@menu-margin-right: @default-size*1.2;
+@menu-margin-left-tablet: @default-size*2;
+@menu-margin-right-desktop: @default-size*1.2;
+@menu-margin-top-desktop: -(@default-size);
 
 //Paddings
+
+//Font
 
 

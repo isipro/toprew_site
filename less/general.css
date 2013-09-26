@@ -10,8 +10,21 @@
 .aside_border {
   border: 1px solid #3299bb;
 }
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+/* =14px */
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+/* =24px */
 section.offers {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 section.offers > section {
   position: relative;
@@ -32,34 +45,35 @@ aside div {
 }
 .logo_container {
   border: 1px solid #633030;
-  width: 224px;
-  height: 128px;
+  width: 22.4rem;
+  height: 12.8rem;
   float: left;
 }
 .menu {
   border: 1px solid #633030;
   list-style-type: none;
-  width: 426px;
+  width: 42.6rem;
   float: right;
-  margin-right: 12px;
+  margin-right: 1.2rem;
   margin-top: 1px;
 }
 .menu > li {
   display: inline-block;
   float: right;
-  width: 102px;
-  height: 35px;
+  width: 9.6rem;
+  height: 3.5rem;
   border: 1px solid #633030;
   text-align: center;
+  margin-left: 5px;
 }
 .menu > li > a {
   display: inline-block;
   margin: auto;
-  width: 100px;
-  line-height: 35px;
+  width: 7.6rem;
+  line-height: 3.5rem;
 }
 footer {
-  min-height: 55px;
+  min-height: 5.5rem;
   border: 1px solid #424242;
 }
 footer p {
@@ -72,12 +86,38 @@ footer p {
   background-color: #ff9900;
   border: 1px solid #995c00;
   margin: 5px;
-  height: 35px;
+  height: 3.5rem;
+  /*.element_height(@mobile-menu-height);*/
+
   z-index: 1;
 }
 #mobile_menu_button a {
   line-height: 35px;
   padding: 10px 200px;
+}
+.height_test {
+  display: inline-block;
+  height: 25px;
+  height: 2.5rem;
+  border: 1px solid #633030;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 0.2rem;
+  list-style: none;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: blue;
+}
+.breadcrumb > .active {
+  color: black;
 }
 @media (max-width: 769px) {
   html {
@@ -92,7 +132,7 @@ footer p {
     border: 1px solid #633030;
     margin: auto;
     float: none;
-    height: 79px;
+    height: 7.9rem;
   }
   .random_offers,
   .last_seen,
@@ -120,7 +160,7 @@ footer p {
     width: 33%;
   }
   aside {
-    margin-top: 10px;
+    margin-top: 1rem;
   }
   aside .subscribe {
     min-height: 45px;
@@ -144,11 +184,11 @@ footer p {
 @media (min-width: 1024px) {
   .logo_container {
     border: 1px solid #633030;
-    width: 105px;
-    height: 70px;
+    width: 10.5rem;
+    height: 7rem;
     float: left;
   }
   .menu {
-    width: 832px;
+    width: 83.2rem;
   }
 }
