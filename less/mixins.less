@@ -3,6 +3,11 @@
 .dev_border {
     border: 1px solid #633030;
 }
+
+.buttons-border {
+    border: 1px solid @hovered-button;
+}
+
 //Offers element border - General border
 .offers_border {
     border: 1px solid @dark-grey;
@@ -46,4 +51,26 @@
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+//Menu Typography
+
+.font-style{
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    .font_size(@menu-font-size);
+    color: @dark-grey;
+}
+
+
+.trans {
+    -o-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+}
+.trans_font {
+    -o-transition: color 0.4s ease;
+    -ms-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
 }

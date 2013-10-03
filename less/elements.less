@@ -2,15 +2,27 @@
 
 
 //Main Font Size
-html { font-size: 62.5%; } 
-body { font-size: 14px; font-size: 1.4rem; } /* =14px */
-h1   { font-size: 24px; font-size: 2.4rem; } /* =24px */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+/* =14px */
+h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+}
+/* =24px */
 
 
 
 //Offers Section
 
 section.offers {
+    .boxed;
     margin-top: @content-margin-top;
 }
 
@@ -18,7 +30,9 @@ section.offers {
         position: relative;
         min-height: 125px;
         .offers_border;
-        .offers_margin;
+        margin-left: @offers-margin-lr;
+        margin-right: @offers-margin-lr*0.5;
+        margin-bottom: @offers-margin-lr;
     }
 
         section.offers > section > button {
@@ -33,9 +47,11 @@ section.offers {
 aside {
 
     div {
-
+        .boxed;
         .aside_border;
-        .offers_margin;
+        margin-right: @offers-margin-lr;
+        margin-left: @offers-margin-lr*0.5;
+        margin-bottom: @offers-margin-lr;
         min-height: 35px;
         text-align: center;
     }
@@ -43,11 +59,12 @@ aside {
 
 //Menu
 
-nav.navigation{
-
+nav.navigation {
     //.dev_border;
 }
+
 .logo_container {
+    .boxed;
     .dev_border;
     .element_width(@logo-container-width-tablet);
     .element_height(@logo-container-height-tablet);
@@ -55,32 +72,55 @@ nav.navigation{
 }
 
 .menu {
-    .dev_border;
+    /*.dev_border;*/
+    .boxed;
     list-style-type: none;
     .element_width(@menu-width-tablet);
     float: right;
     margin-right: @menu-margin-right;
-    margin-top: 1px;
-        >li {
+    margin-top: 5px;
+
+    >li {
+        display: inline-block;
+        background-color: @grey;
+        .buttons-border;
+        float: right;
+        .element_width(@menu-button-width);
+        .element_height(@menu-button-height);
+        /*.dev_border;*/
+        text-align: center;
+        margin-left: 5px;
+
+        >.button_decoration {
             display: inline-block;
-            float: right;
-            .element_width(@menu-button-width);
+            float: left;
+            width: 3px;
             .element_height(@menu-button-height);
-            .dev_border;
-            text-align: center;
-            margin-left: 5px;
-            >a{
-                display: inline-block;
-                margin: auto;
-                .element_width(@menu-button-width - 2);
-                line-height: @menu-button-height;
+            background-color: @orange;
+        }
+
+
+
+        >a {
+            display: inline-block;
+            margin: auto;
+            text-decoration: none;
+            .element_width(@menu-button-width - 0.5);
+            line-height: @default-size-rem*3.5;
+            .font-style;
+            .trans;
+
+            &:hover {
+                background-color: @hovered-button;
             }
         }
+    }
 }
 
 //Footer
 
 footer {
+    .boxed;
     min-height: @foot-height;
     .offers_border;
 
@@ -92,6 +132,7 @@ footer {
 
 // Mobile Menu
 #mobile_menu_button {
+    .boxed;
     position: relative;
     top: 10px;
     color: @dark-grey;
@@ -108,15 +149,16 @@ footer {
     }
 }
 
-.height_test{
+.height_test {
     display: inline-block;
     .element_height(2.5);
-    .dev_border; 
+    .dev_border;
 }
 
 
 //Bootstrap BreakCrumbs
-.breadcrumb {
+/*.breadcrumb {
+  .boxed;
   padding: 8px 15px;
   margin-bottom: 0.2rem;
   list-style: none;
@@ -133,4 +175,50 @@ footer {
   > .active {
     color: black;
   }
+}*/
+
+
+//Bootstrap Breadcrumb origina and custom style
+
+
+.breadcrumb {
+    .boxed;
+    .element_height(1.8);
+    padding: 1px 1px;
+    margin-bottom: @line-height-computed;
+    margin-left: @default-size-rem*0.5;
+    margin-top: 0;
+    list-style: none;
+    background-color: @grey;
+    border-radius: 0;
+
+    > li {
+        display: inline-block;
+
+        & + li:before {
+            content: "/\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+            padding: 0 5px;
+            color: @blue;
+        }
+        >a{
+            text-decoration: none;
+            color: @blue;
+            .trans_font;
+
+            &:hover {
+                color: darken(@blue, 15%);
+            }
+        }
+    }
+
+    > .active {
+        color: @light-grey;
+    }
+}
+
+
+.nav_breadcrumb {
+    background-color: @grey;
+    .element_height(1.8);
+    margin: @default-size-rem*1.2 @default-size-rem;
 }

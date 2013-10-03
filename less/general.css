@@ -1,6 +1,9 @@
 ﻿.dev_border {
   border: 1px solid #633030;
 }
+.buttons-border {
+  border: 1px solid #a3a3a3;
+}
 .offers_border {
   border: 1px solid #424242;
 }
@@ -9,6 +12,35 @@
 }
 .aside_border {
   border: 1px solid #3299bb;
+}
+.boxed {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
+}
+.font-style {
+  font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  color: #424242;
+}
+.trans {
+  -o-transition: background-color 0.4s ease;
+  -ms-transition: background-color 0.4s ease;
+  -moz-transition: background-color 0.4s ease;
+  -webkit-transition: background-color 0.4s ease;
+}
+.trans_font {
+  -o-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
 }
 html {
   font-size: 62.5%;
@@ -24,13 +56,24 @@ h1 {
 }
 /* =24px */
 section.offers {
-  margin-top: 1rem;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
+  margin-top: -3px;
 }
 section.offers > section {
   position: relative;
   min-height: 125px;
   border: 1px solid #424242;
-  margin: 5px;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
 }
 section.offers > section > button {
   position: absolute;
@@ -38,12 +81,32 @@ section.offers > section > button {
   bottom: 10px;
 }
 aside div {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
   border: 1px solid #3299bb;
-  margin: 5px;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
   min-height: 35px;
   text-align: center;
 }
 .logo_container {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
   border: 1px solid #633030;
   width: 224px;
   width: 22.4rem;
@@ -52,33 +115,75 @@ aside div {
   float: left;
 }
 .menu {
-  border: 1px solid #633030;
+  /*.dev_border;*/
+
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
   list-style-type: none;
-  width: 426px;
-  width: 42.6rem;
+  width: 460px;
+  width: 46rem;
   float: right;
   margin-right: 1.2rem;
-  margin-top: 1px;
+  margin-top: 5px;
 }
 .menu > li {
   display: inline-block;
+  background-color: #bcbcbc;
+  border: 1px solid #a3a3a3;
   float: right;
   width: 96px;
   width: 9.6rem;
   height: 35px;
   height: 3.5rem;
-  border: 1px solid #633030;
+  /*.dev_border;*/
+
   text-align: center;
   margin-left: 5px;
+}
+.menu > li > .button_decoration {
+  display: inline-block;
+  float: left;
+  width: 3px;
+  height: 35px;
+  height: 3.5rem;
+  background-color: #ff9900;
 }
 .menu > li > a {
   display: inline-block;
   margin: auto;
-  width: 76px;
-  width: 7.6rem;
-  line-height: 3.5;
+  text-decoration: none;
+  width: 91px;
+  width: 9.1rem;
+  line-height: 3.5rem;
+  font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  color: #424242;
+  -o-transition: background-color 0.4s ease;
+  -ms-transition: background-color 0.4s ease;
+  -moz-transition: background-color 0.4s ease;
+  -webkit-transition: background-color 0.4s ease;
+}
+.menu > li > a:hover {
+  background-color: #a3a3a3;
 }
 footer {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
   min-height: 5.5rem;
   border: 1px solid #424242;
 }
@@ -86,6 +191,15 @@ footer p {
   text-align: center;
 }
 #mobile_menu_button {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
   position: relative;
   top: 10px;
   color: #424242;
@@ -108,12 +222,44 @@ footer p {
   height: 2.5rem;
   border: 1px solid #633030;
 }
-.breadcrumb {
+/*.breadcrumb {
+  .boxed;
   padding: 8px 15px;
   margin-bottom: 0.2rem;
   list-style: none;
   background-color: white;
   border-radius: 0.2rem;
+  > li {
+    display: inline-block;
+    &+li:before {
+      content: "/\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 5px;
+      color: blue;
+    }
+  }
+  > .active {
+    color: black;
+  }
+}*/
+.breadcrumb {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
+  height: 18px;
+  height: 1.8rem;
+  padding: 1px 1px;
+  margin-bottom: 0.2rem;
+  margin-left: 0.5rem;
+  margin-top: 0;
+  list-style: none;
+  background-color: #bcbcbc;
+  border-radius: 0;
 }
 .breadcrumb > li {
   display: inline-block;
@@ -121,10 +267,27 @@ footer p {
 .breadcrumb > li + li:before {
   content: "/\00a0";
   padding: 0 5px;
-  color: blue;
+  color: #3299bb;
+}
+.breadcrumb > li > a {
+  text-decoration: none;
+  color: #3299bb;
+  -o-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
+}
+.breadcrumb > li > a:hover {
+  color: #22687f;
 }
 .breadcrumb > .active {
-  color: black;
+  color: #e9e9e9;
+}
+.nav_breadcrumb {
+  background-color: #bcbcbc;
+  height: 18px;
+  height: 1.8rem;
+  margin: 1.2rem 1rem;
 }
 @media (max-width: 769px) {
   html {
@@ -171,7 +334,7 @@ footer p {
     width: 33%;
   }
   aside {
-    margin-top: 1rem;
+    margin-top: -3px;
   }
   aside .subscribe {
     min-height: 45px;
@@ -202,7 +365,13 @@ footer p {
     float: left;
   }
   .menu {
-    width: 832px;
-    width: 83.2rem;
+    width: 870px;
+    width: 87rem;
+  }
+  .content {
+    width: 660px;
+  }
+  .sidebar {
+    width: 339px;
   }
 }

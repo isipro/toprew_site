@@ -25,17 +25,21 @@
 @logo-container-height-desktop: @default-size*7.0; 
 @logo-container-width-desktop: @default-size*10.5;
  
-@menu-width-tablet: @default-size*42.6;
-@menu-width-desktop: @default-size*83.2;
+@menu-width-tablet: @default-size*46;
+@menu-width-desktop: @default-size*87;
 @menu-button-width: @default-size*9.6;
 @menu-button-height: @default-size*3.5; 
 
 //Colors
 @orange: rgb(255,153,0);        //Hex: #FF9900, RGB: 255,153,0
 @blue: rgb(50,153,187);         //Hex: #3299BB, RGB: 50,153,187
-@dark-grey: rgb(66,66,66);      //Hex: #424242, RGB: 66,66,66
+@dark-grey: rgb(66,66,66);      //Hex: #424242, RGB: 66,66,66  // font color
 @light-grey: rgb(233,233,233);  //Hex: #E9E9E9, RGB: 233,233,233
-@grey: rgb(188,188,188);        //Hex: #BCBCBC, RGB: 188,188,188
+@grey: rgb(188,188,188);        //Hex: #BCBCBC, RGB: 188,188,188  - button color
+@blue-grey: rgb(180,188,188);        //Hex: #B4BCBC, RGB: 180,188,188
+@hovered-button: darken(@grey, 10%);
+@selected-button: rgb(146,146,146); //Hex: #929292, RGB: 146,146,146
+
 
 //Borders
 @mobile-menu-border: darken(@orange, 20%);
@@ -46,14 +50,22 @@
 
 //Margins
 
-@content-margin-top: @default-size-rem;
+@content-margin-top: -3px;
 @menu-margin-right: @default-size-rem*1.2;
 @menu-margin-left-tablet: @default-size-rem*2;
 @menu-margin-right-desktop: @default-size-rem*1.2;
 @menu-margin-top-desktop: -(@default-size-rem);
+@offers-margin-lr: @default-size-rem;
+@aside-offers-margin: @default-size-rem;
 
 //Paddings
 
 //Font
+@menu-font-size: (@default-size*1.5);
 
-
+//Bootstrap BreadCrumb
+@line-height-computed: 0.2rem;
+@breadcrumb-bg:               @grey;
+@border-radius-base:             4px;
+@breadcrumb-color:            #ccc;
+@breadcrumb-active-color: @light-grey;
