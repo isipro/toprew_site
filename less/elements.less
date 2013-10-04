@@ -9,6 +9,7 @@ html {
 body {
     font-size: 14px;
     font-size: 1.4rem;
+    background-image: url('../img/gray_jean.png');
 }
 /* =14px */
 h1 {
@@ -17,30 +18,59 @@ h1 {
 }
 /* =24px */
 
+//wrapper
 
+.wrapper {
+    background-color: lighten(@light-grey, 3%);
+    .wrapper_border;
+    margin: auto;
+    margin-top: @default-size-rem*0.5;    
+}
 
 //Offers Section
 
 section.offers {
     .boxed;
     margin-top: @content-margin-top;
-}
 
-    section.offers > section {
+
+    .top_offers{
+        /*min-height: 300px;*/
+    }
+
+    >section {
         position: relative;
         min-height: 125px;
         .offers_border;
         margin-left: @offers-margin-lr;
         margin-right: @offers-margin-lr*0.5;
         margin-bottom: @offers-margin-lr;
-    }
+        background-color: #fff;
+        .offers_border;
+    
 
-        section.offers > section > button {
+        >button {
+            .trans;
+            .trans_font;
             position: absolute;
             right: 10px;
             bottom: 10px;
-        }
+            display: inline-block;
+            background-color: @blue-grey;
+            color: #fff;
+            .offers_button_border;
+            float: right;
+            .element_width(@menu-button-width);
+            .element_height(@menu-button-height);
 
+
+            &:hover{
+                background-color: @blue-grey-darker;                
+                color: @light-grey;
+            }
+        }
+    }
+}
 
 //Sidebar
 
@@ -65,10 +95,11 @@ nav.navigation {
 
 .logo_container {
     .boxed;
-    .dev_border;
     .element_width(@logo-container-width-tablet);
     .element_height(@logo-container-height-tablet);
     float: left;
+    margin-left: @default-size-rem;
+    margin-top: @default-size-rem*0.6;
 }
 
 .menu {
@@ -82,7 +113,7 @@ nav.navigation {
 
     >li {
         display: inline-block;
-        background-color: @grey;
+        background-color: @orange;
         .buttons-border;
         float: right;
         .element_width(@menu-button-width);
@@ -96,7 +127,7 @@ nav.navigation {
             float: left;
             width: 3px;
             .element_height(@menu-button-height);
-            background-color: @orange;
+            background-color: @grey;
         }
 
 
@@ -200,7 +231,8 @@ footer {
             padding: 0 5px;
             color: @blue;
         }
-        >a{
+
+        >a {
             text-decoration: none;
             color: @blue;
             .trans_font;
@@ -222,3 +254,6 @@ footer {
     .element_height(1.8);
     margin: @default-size-rem*1.2 @default-size-rem;
 }
+
+//Bootstrap Carousel.Less
+@import "carousel.less";

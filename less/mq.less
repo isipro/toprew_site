@@ -9,12 +9,10 @@
 
     .wrapper {
         width: @mobile-size;
-        margin: auto;
     }
 
     .logo_container {
-        width: @logo-container-width-mobile;
-        .dev_border;
+        width: @logo-container-width-mobile;        
         margin: auto;
         float: none;
         .element_height(@logo-container-height-mobile);
@@ -36,6 +34,7 @@
         width: 100%;
         max-width: 1000px;
         margin: auto;
+        margin-top: @default-size-rem*0.5;    
     }
 
     #mobile_menu_button {
@@ -89,7 +88,7 @@
 @media (min-width: @desktop-bp) {
 
     .logo_container {
-        .dev_border;
+        
         .element_width(@logo-container-width-desktop);
         .element_height(@logo-container-height-desktop);
         float: left;

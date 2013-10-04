@@ -1,18 +1,33 @@
 //Mixins
 
+// Borders
 .dev_border {
     border: 1px solid #633030;
 }
 
 .buttons-border {
-    border: 1px solid @hovered-button;
+    border: 1px solid darken(@orange, 20%);
+    border-radius: 0 5px 0 5px;
 }
 
-//Offers element border - General border
+    //Wrapper Border
+.wrapper_border{
+    border: 1px solid @grey;
+    border-radius: 3px;
+}
+    //Offers element border - General border
 .offers_border {
-    border: 1px solid @dark-grey;
+    border: 1px solid @grey;
+    border-radius: 2px;
 }
 
+    //offer button border
+    .offers_button_border{
+        border: 1px solid darken(@blue-grey, 20%);
+        border-radius: 2px;
+    }
+
+//Margins
 .offers_margin {
     margin: 5px;
 }
@@ -74,3 +89,5 @@
     -moz-transition: color 0.4s ease;
     -webkit-transition: color 0.4s ease;
 }
+
+@import "bootstrap_mixins.less";
