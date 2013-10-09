@@ -21,7 +21,7 @@ h1 {
 //wrapper
 
 .wrapper {
-    background-color: lighten(@light-grey, 3%);
+    background-color: @lightest-grey;
     .wrapper_border;
     margin: auto;
     margin-top: @default-size-rem*0.5;    
@@ -75,33 +75,62 @@ section.offers {
 //Sidebar
 
 aside {
-
+    margin-top: @content-margin-top;
     div {
         .boxed;
         .aside_border;
+        background-color: #fff;
         margin-right: @offers-margin-lr;
         margin-left: @offers-margin-lr*0.5;
         margin-bottom: @offers-margin-lr;
         min-height: 35px;
         text-align: center;
     }
+
+    .subscribe{
+        position: relative;
+        
+        .element_height(@default-size*3.5);
+        span{
+            float: left;
+            padding-left: @default-size-rem*2;
+            line-height: @default-size-rem*3.5;
+            .aside_font_style;
+        }
+        .subscribe_search{
+            .boxed;
+            background-color: @lightest-grey;
+            position: absolute;
+            right: 0;
+            margin-right: -1px;
+            display: inline-block;
+            .element_width(@default-size*5.5);
+            .element_height(@default-size*3.5);
+            margin-top: -1px;
+            border-right: 1px solid @grey;
+            border-left: 1px solid @grey;
+            
+        }
+    }
+
 }
 
 //Menu
 
-nav.navigation {
-    //.dev_border;
-}
 
 .logo_container {
     .boxed;
-    .element_width(@logo-container-width-tablet);
-    .element_height(@logo-container-height-tablet);
     float: left;
-    margin-left: @default-size-rem;
+    margin-left: @default-size-rem*2;
     margin-top: @default-size-rem*0.6;
+    text-align: center;
+    z-index: 3;
 }
 
+.navigation{
+    .element_width(@menu-width-tablet);
+    float: right;
+}
 .menu {
     /*.dev_border;*/
     .boxed;
@@ -109,12 +138,12 @@ nav.navigation {
     .element_width(@menu-width-tablet);
     float: right;
     margin-right: @menu-margin-right;
-    margin-top: 5px;
+    margin-top: 10px;
 
     >li {
         display: inline-block;
-        background-color: @orange;
-        .buttons-border;
+        .button_style_grey;      
+        position: relative;
         float: right;
         .element_width(@menu-button-width);
         .element_height(@menu-button-height);
@@ -124,10 +153,11 @@ nav.navigation {
 
         >.button_decoration {
             display: inline-block;
-            float: left;
+            position: absolute;
+            left: 0;
             width: 3px;
             .element_height(@menu-button-height);
-            background-color: @grey;
+            background-color: @orange;
         }
 
 
@@ -136,17 +166,53 @@ nav.navigation {
             display: inline-block;
             margin: auto;
             text-decoration: none;
-            .element_width(@menu-button-width - 0.5);
-            line-height: @default-size-rem*3.5;
+            .element_width(@menu-button-width);
+            line-height: @default-size-rem*@menu-button-height;
+            
+            border: none;
             .font-style;
             .trans;
 
             &:hover {
-                background-color: @hovered-button;
+                .button_style_grey_hover;
             }
         }
     }
 }
+
+//Submenu
+
+.submenu {
+    margin-top: -3px;
+    
+    li{
+        .buttons-border-submenu;
+        .element_height(@menu-button-height - 1);
+        background-color: @bluish;
+        a{
+            .buttons-border-submenu;
+            border: none;
+            line-height: @default-size-rem*(@menu-button-height - 1);
+            color: @dark-grey;
+            &:hover {
+                background-color: @blue;
+            }
+        }
+    }
+}
+
+
+//Submenu Inactive buttons
+.submenu-inactive{
+    background-color: @light-grey !important;
+    a{
+
+        &:hover {
+                background-color: @blue-grey !important;
+            }
+    }
+}
+
 
 //Footer
 
@@ -215,26 +281,26 @@ footer {
 .breadcrumb {
     .boxed;
     .element_height(1.8);
-    padding: 1px 1px;
+    padding: 1px 3px;
     margin-bottom: @line-height-computed;
-    margin-left: @default-size-rem*0.5;
+    margin-left: @default-size-rem;
     margin-top: 0;
     list-style: none;
-    background-color: @grey;
+    background-color: #fff;
     border-radius: 0;
-
+    .breadcrumb_border;
     > li {
         display: inline-block;
 
         & + li:before {
             content: "/\00a0"; // Unicode space added since inline-block means non-collapsing white-space
             padding: 0 5px;
-            color: @blue;
+            color: @redish;
         }
 
         >a {
             text-decoration: none;
-            color: @blue;
+            color: @redish;
             .trans_font;
 
             &:hover {
@@ -250,9 +316,9 @@ footer {
 
 
 .nav_breadcrumb {
-    background-color: @grey;
+    background-color: @blue;
     .element_height(1.8);
-    margin: @default-size-rem*1.2 @default-size-rem;
+    margin: @default-size-rem*1.2 0;
 }
 
 //Bootstrap Carousel.Less
