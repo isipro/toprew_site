@@ -9,7 +9,7 @@ html {
 body {
     font-size: 14px;
     font-size: 1.4rem;
-    background-image: url('../img/gray_jean.png');
+    background-image: url('../img/wild_oliva.png');
 }
 /* =14px */
 h1 {
@@ -21,10 +21,11 @@ h1 {
 //wrapper
 
 .wrapper {
-    background-color: @lightest-grey;
+    background-color: @ice;
+    background-image: url('../img/gray_jean.png');
     .wrapper_border;
     margin: auto;
-    margin-top: @default-size-rem*0.5;    
+    margin-top: @default-size-rem;    
 }
 
 //Offers Section
@@ -120,9 +121,13 @@ aside {
 
 .logo_container {
     .boxed;
+    border: 2px solid @dark-brown;
+    border-radius: 5px 5px 2px 2px;
+    background-color: @beige;
     float: left;
     margin-left: @default-size-rem*2;
-    margin-top: @default-size-rem*0.6;
+    margin-top: -(@default-size-rem*0.6);
+    
     text-align: center;
     z-index: 3;
 }
@@ -142,7 +147,7 @@ aside {
 
     >li {
         display: inline-block;
-        .button_style_grey;      
+        .buttons_style_brown;     
         position: relative;
         float: right;
         .element_width(@menu-button-width);
@@ -174,7 +179,8 @@ aside {
             .trans;
 
             &:hover {
-                .button_style_grey_hover;
+                .button_style_brown_hover;                     
+                color: @cheez;                
             }
         }
     }
@@ -186,16 +192,16 @@ aside {
     margin-top: -3px;
     
     li{
-        .buttons-border-submenu;
+        .subbutton_style_brown;
         .element_height(@menu-button-height - 1);
-        background-color: @bluish;
+        
         a{
-            .buttons-border-submenu;
+            .subbutton_style_brown;
             border: none;
             line-height: @default-size-rem*(@menu-button-height - 1);
             color: @dark-grey;
             &:hover {
-                background-color: @blue;
+                .subbutton_style_brown_hover;
             }
         }
     }
@@ -280,15 +286,15 @@ footer {
 
 .breadcrumb {
     .boxed;
-    .element_height(2.2);
+    .element_height(1.8);
     padding: 1px 3px;
     margin-bottom: @line-height-computed;
-    margin-left: @default-size-rem;
+    margin-left: @default-size-rem*2.8;
     margin-top: 0;
     list-style: none;
-    background-color: #fff;
+    /*background-color: #fff;*/
     border-radius: 0;
-    .breadcrumb_border;
+    /*.breadcrumb_border;*/
     > li {
         display: inline-block;
 
@@ -300,11 +306,11 @@ footer {
 
         >a {
             text-decoration: none;
-            color: @dark-grey;
+            color: @ice;
             .trans_font;
 
             &:hover {
-                color: @grey;
+                color: @milky;
             }
         }
     }
@@ -316,10 +322,29 @@ footer {
 
 
 .nav_breadcrumb {
-    background-color: @blue;
-    .element_height(2.2);
+    background-color: @brown;
+    .element_height(1.8);
+    .dev_border;
+    width: 1050px;
+    
     margin: @default-size-rem*1.2 0;
+    margin-left: -(@default-size-rem*3);
+    border-radius: 3px;
 }
 
 //Bootstrap Carousel.Less
 @import "carousel.less";
+
+
+.decor_breadcrumb_left{
+    .boxed;
+    display: inline-block;
+    .element_height(@default-size*1.4);
+    .element_width(@default-size*1.8);
+    background-color: @dark-brown;
+    border: 1px solid @milky;
+    border-radius: 4px;
+    float: left;
+    margin-left: @default-size-rem*0.4;
+    margin-top: @default-size-rem*0.2;
+}

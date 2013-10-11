@@ -1,0 +1,28 @@
+//Colors Brown Design
+@dark-brown: rgb(70, 52, 6);
+@brown: rgb(160, 131, 65);
+@cheez: rgb(255, 227, 141);
+@milky: rgb(255, 251, 193);
+
+@orange: rgb(250,146,0);
+
+@diesel: rgb(184, 186, 149);
+@beige: rgb(228, 220, 164);
+
+@graphite: rgb(66, 66, 66);
+@ice: rgb(240,240,240);
+@snow: rgb(247, 247, 247);
+
+
+
+.clzla_gradient_brown_hover {
+    background: #93753c; /* Old browsers */
+    background: -moz-linear-gradient(top,  #93753c 51%, #463406 52%, #77622f 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#93753c), color-stop(52%,#463406), color-stop(99%,#77622f)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #93753c 51%,#463406 52%,#77622f 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #93753c 51%,#463406 52%,#77622f 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #93753c 51%,#463406 52%,#77622f 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #93753c 51%,#463406 52%,#77622f 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93753c', endColorstr='#77622f',GradientType=0 ); /* IE6-9 */
+
+}
