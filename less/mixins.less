@@ -10,6 +10,8 @@
     border-radius: 10px 2px 2px 2px;
 }
 
+    //Grey
+
 .button_style_grey{
     border: 1px solid @dark-grey;
     .clzla_gradient_grey;
@@ -17,6 +19,8 @@
 .button_style_grey_hover{
     background-color: @grey;
 }
+
+    //Brown
 .buttons_style_brown{
     border: 1px solid @dark-brown;
     border-radius: 5px;
@@ -49,13 +53,13 @@
 }
     //Offers element border - General border
 .offers_border {
-    border: 1px solid @grey;
+    border: 2px solid @brown;
     border-radius: 2px;
 }
 
     //offer button border
     .offers_button_border{
-        border: 1px solid darken(@blue-grey, 20%);
+        border: 1px solid @dark-brown;
         border-radius: 2px;
     }
 
@@ -73,7 +77,12 @@
 
 //Aside border
 .aside_border {
-    border: 1px solid @grey;
+    border: 1px solid @brown;
+    border-radius: 2px;
+}
+.aside_border_inner {
+    border: 1px solid darken(@diesel, 25%);
+    border-radius: 3px;
 }
 
 //Height
@@ -117,10 +126,10 @@
 
 
 .trans {
-    -o-transition: background-color 0.4s ease;
-    -ms-transition: background-color 0.4s ease;
-    -moz-transition: background-color 0.4s ease;
-    -webkit-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease, color 0.4s ease;
+    -ms-transition: background-color 0.4s ease, color 0.4s ease;
+    -moz-transition: background-color 0.4s ease, color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease, color 0.4s ease;
 }
 .trans_font {
     -o-transition: color 0.4s ease;
@@ -129,8 +138,16 @@
     -webkit-transition: color 0.4s ease;
 }
 
+.transit{
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    
+}
+
 .aside_font_style{
-    color: lighten(@dark-grey, 20%);
+    color: darken(@diesel, 45%);
     font-family: Georgia;
     .font_size(1.8);
     letter-spacing: @default-size-rem*0.6;
