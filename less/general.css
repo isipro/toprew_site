@@ -881,6 +881,15 @@ h1 {
 }
 /* =24px */
 .wrapper {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
   background-color: #f0f0f0;
   background-image: url('../img/gray_jean.png');
   border: 1px solid #a08341;
@@ -935,6 +944,7 @@ section.offers > section > button {
 }
 section.offers > section > button:hover {
   background-color: #7c6532;
+  color: #fffbc1;
 }
 aside {
   margin-top: -3px;
@@ -943,8 +953,6 @@ aside.sidebar {
   margin-left: 0.5rem;
   border: 1px solid #a08341;
   border-radius: 2px;
-  width: 324px;
-  width: 32.4rem;
   padding-top: 1rem;
   background-color: #b8ba95;
 }
@@ -1272,8 +1280,7 @@ footer p {
   height: 1.8rem;
   border: 1px solid #633030;
   width: 1050px;
-  margin: 1.2rem 0;
-  margin-left: -3rem;
+  margin-bottom: 1rem;
   border-radius: 3px;
 }
 .nav_breadcrumb .breadcrumb {
@@ -1573,12 +1580,14 @@ footer p {
     width: 450px;
     clear: both;
     margin: auto;
+    margin-bottom: 2rem;
   }
   .wrapper section.offers > section {
     margin-right: 1rem;
   }
   .wrapper aside div {
     margin-left: 1rem;
+    margin-right: 1rem;
   }
   .logo_container {
     float: none;
@@ -1591,6 +1600,15 @@ footer p {
     display: none;
   }
   .breadcrumb {
+    display: none;
+  }
+  .nav_breadcrumb {
+    width: 98%;
+    margin: auto;
+    margin-bottom: 1rem;
+    display: none;
+  }
+  .nav_breadcrumb .decor_breadcrumb_right {
     display: none;
   }
 }
@@ -1615,10 +1633,13 @@ footer p {
     z-index: 1;
   }
   .content {
-    width: 66%;
+    width: 65%;
   }
   .sidebar {
     width: 33%;
+  }
+  aside {
+    margin-right: 1rem;
   }
   aside .search {
     min-height: 45px;
@@ -1631,6 +1652,14 @@ footer p {
   }
   aside .ads {
     min-height: 33%;
+  }
+  .nav_breadcrumb {
+    width: 98%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .nav_breadcrumb .decor_breadcrumb_right {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
@@ -1654,6 +1683,14 @@ footer p {
     width: 660px;
   }
   .sidebar {
-    width: 339px;
+    width: 322px;
+  }
+  .nav_breadcrumb {
+    width: 1050px;
+    margin: 1.2rem 0;
+    margin-left: -3rem;
+  }
+  .decor_breadcrumb_right {
+    display: inline-block;
   }
 }

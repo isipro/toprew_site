@@ -21,6 +21,7 @@ h1 {
 //wrapper
 
 .wrapper {
+    .boxed;
     background-color: @ice;
     background-image: url('../img/gray_jean.png');
     .wrapper_border;
@@ -66,7 +67,7 @@ section.offers {
 
             &:hover {
                 background-color: darken(@brown, 10%);
-                
+                color: @milky;
             }
         }
     }
@@ -80,7 +81,7 @@ aside {
     &.sidebar{
         margin-left: @default-size-rem*0.5;
         .aside_border;
-        .element_width(@default-size*32.4);
+        
         padding-top: @default-size-rem;
         background-color: @diesel;
     }
@@ -310,8 +311,8 @@ footer {
     .element_height(1.8);
     .dev_border;
     width: 1050px;
-    margin: @default-size-rem*1.2 0;
-    margin-left: -(@default-size-rem*3);
+    
+    margin-bottom: @default-size-rem;
     border-radius: 3px;
 
 
