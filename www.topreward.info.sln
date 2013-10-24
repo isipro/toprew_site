@@ -5,20 +5,25 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www.topreward.info", ".", "
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/www.topreward.info"
-		Debug.AspNetCompiler.PhysicalPath = "D:\Dev\WebSites\www.topreward.info\"
+		Debug.AspNetCompiler.PhysicalPath = "..\www.topreward.info\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\www.topreward.info\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/www.topreward.info"
-		Release.AspNetCompiler.PhysicalPath = "D:\Dev\WebSites\www.topreward.info\"
+		Release.AspNetCompiler.PhysicalPath = "..\www.topreward.info\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\www.topreward.info\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "56939"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B0C8909-71EB-49DD-BED3-5350678F2EA7}"
+	ProjectSection(SolutionItems) = preProject
+		WE-settings.xml = WE-settings.xml
 	EndProjectSection
 EndProject
 Global

@@ -1,0 +1,157 @@
+//Media Queries
+
+// Mobile
+@media (max-width: @mobile-bp) {
+    html {
+        background: #808080;
+    }
+    //temporary
+
+    .wrapper {
+        width: @mobile-size;
+
+        .navigation {
+            width: 450px;
+            clear: both;
+            margin: auto;
+            margin-bottom: @default-size-rem*2;
+        }
+
+        section.offers > section {
+            margin-right: @offers-margin-lr;
+        }
+
+
+        aside div {
+            margin-left: @default-size-rem;
+            margin-right: @default-size-rem;
+        }
+    }
+
+    .logo_container {
+        float: none;
+        clear: both;
+        margin: auto;
+    }
+
+    .random_offers, .last_seen, .menu {
+        display: none;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .nav_breadcrumb {
+        width: 98%;
+        margin: auto;
+        margin-bottom: @default-size-rem;
+        display: none;
+
+        .decor_breadcrumb_right {
+            display: none;
+        }
+    }
+}
+
+//Tablet
+
+@media (min-width: @mobile-bp) {
+    .wrapper {
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    #mobile_menu_button {
+        display: none;
+    }
+
+    .menu {
+        /*>li{float: left;}*/
+    }
+
+    .logo_container {
+        .element_width(@logo-container-width-desktop);
+        .element_height(@logo-container-height-desktop);
+        float: left;
+        z-index: 1;
+    }
+
+    .content {
+        width: 65%;
+    }
+
+    .sidebar {
+        width: 33%;
+    }
+
+    aside {
+        margin-right: @default-size-rem;
+
+        .search {
+            min-height: 45px;
+        }
+
+        .random_offers {
+            min-height: 155px;
+        }
+
+        .last_seen {
+            min-height: 155px;
+        }
+
+        .ads {
+            min-height: 33%;
+        }
+    }
+
+    .nav_breadcrumb {
+        width: 98%;
+        margin: auto;
+        margin-bottom: @default-size-rem;
+
+        .decor_breadcrumb_right {
+            display: none;
+        }
+    }
+}
+
+
+// Desktop
+@media (min-width: @desktop-bp) {
+
+
+
+    .navigation {
+        .element_width(@logo-container-width-desktop + 2);
+    }
+
+    .logo_container {
+        .element_width(@logo-container-width-desktop);
+        .element_height(@logo-container-height-desktop);
+        float: left;
+        z-index: 1;
+    }
+
+    .menu {
+        .element_width(@menu-width-desktop);
+    }
+
+    .content {
+        width: 660px;
+    }
+
+    .sidebar {
+        width: 322px;
+    }
+
+    .nav_breadcrumb {
+        width: 1050px;
+        margin: @default-size-rem*1.2 0;
+        margin-left: -(@default-size-rem*3);
+    }
+
+    .decor_breadcrumb_right {
+        display: inline-block;
+    }
+}

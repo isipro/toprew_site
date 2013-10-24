@@ -1,0 +1,395 @@
+//elements
+
+
+//Main Font Size
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 14px;
+    font-size: 1.4rem;
+    background-image: url('../img/wild_oliva.png');
+}
+/* =14px */
+h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+}
+/* =24px */
+
+//wrapper
+
+.wrapper {
+    .boxed;
+    background-color: @ice;
+    background-image: url('../img/gray_jean.png');
+    .wrapper_border;
+    margin: auto;
+    margin-top: @default-size-rem;
+}
+
+//Offers Section
+
+section.offers {
+    .boxed;
+    margin-top: @content-margin-top;
+
+
+    .top_offers {
+        /*min-height: 300px;*/
+    }
+
+    >section {
+        position: relative;
+        min-height: 125px;
+        .offers_border;
+        margin-left: @offers-margin-lr;
+        margin-right: @offers-margin-lr*0.5;
+        margin-bottom: @offers-margin-lr;
+        background-color: #fff;
+        
+
+
+        >button {
+            .transit;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            display: inline-block;
+            background-color: @brown;
+            color: @ice;
+            .offers_button_border;
+            float: right;
+            .element_width(@menu-button-width);
+            .element_height(@menu-button-height);
+
+
+            &:hover {
+                background-color: darken(@brown, 10%);
+                color: @milky;
+            }
+        }
+    }
+}
+
+//Sidebar
+
+aside {
+    margin-top: @content-margin-top;
+
+    &.sidebar{
+        margin-left: @default-size-rem*0.5;
+        .aside_border;
+        
+        padding-top: @default-size-rem;
+        background-color: @diesel;
+    }
+
+    div {
+        .boxed;
+        .aside_border_inner;
+        background-color: @ice;
+        margin-right: @offers-margin-lr*0.5;
+        margin-left: @offers-margin-lr*0.5;
+        margin-bottom: @offers-margin-lr;
+        min-height: 35px;
+        text-align: center;
+    }
+
+    .subscribe {
+        position: relative;
+        .element_height(@default-size*3.5);
+        background-color: lighten(@diesel, 10%);
+
+        span {
+            float: left;
+            padding-left: @default-size-rem*2;
+            line-height: @default-size-rem*3.5;
+            .aside_font_style;
+        }
+
+        .subscribe_search {
+            .boxed;
+            background-color: @diesel;
+            position: absolute;
+            right: 0;
+            margin-right: -1px;
+            .aside_border_inner;
+            display: inline-block;
+            .element_width(@default-size*5.5);
+            .element_height(@default-size*3.5);
+            margin-top: -1px;
+            border: 1px solid darken(@diesel, 25%);
+        }
+    }
+
+    .aside_search{
+        background-color: @snow;
+    }
+}
+
+//Menu
+
+
+.logo_container {
+    .boxed;
+    border: 2px solid @dark-brown;
+    border-radius: 5px 5px 2px 2px;
+    background-color: @beige;
+    float: left;
+    margin-left: @default-size-rem*2;
+    margin-top: -(@default-size-rem*0.6);
+    text-align: center;
+    z-index: 3;
+}
+
+.navigation {
+    .element_width(@menu-width-tablet);
+    float: right;
+}
+
+.menu {
+    /*.dev_border;*/
+    .boxed;
+    list-style-type: none;
+    .element_width(@menu-width-tablet);
+    float: right;
+    margin-right: @menu-margin-right;
+    margin-top: 10px;
+
+    >li {
+        display: inline-block;
+        .buttons_style_brown;
+        position: relative;
+        float: right;
+        .element_width(@menu-button-width);
+        .element_height(@menu-button-height);
+        /*.dev_border;*/
+        text-align: center;
+        margin-left: 5px;
+
+        >.button_decoration {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            width: 3px;
+            .element_height(@menu-button-height);
+            background-color: @orange;
+        }
+
+
+
+        >a {
+            display: inline-block;
+            margin: auto;
+            text-decoration: none;
+            .element_width(@menu-button-width);
+            line-height: @default-size-rem*@menu-button-height;
+            border: none;
+            .font-style;
+            .transit;
+            
+            &:hover {
+                background-color: @brown;
+                color: @cheez;
+            }
+        }
+    }
+}
+
+//Submenu
+
+.submenu {
+    margin-top: -3px;
+
+    li {
+        .subbutton_style_brown;
+        .element_height(@menu-button-height - 1);
+
+        >a {
+            .subbutton_style_brown;
+            border: none;
+            line-height: @default-size-rem*(@menu-button-height - 1);
+            color: @dark-brown;
+            
+
+            &:hover {
+                color: @dark-brown;
+                font-weight: 500;
+                .font_size(@menu-font-size*0.9);
+                border: none;
+                
+            }
+        }
+    }
+}
+
+
+//Submenu Inactive buttons
+.submenu-inactive {
+    background-color: @light-grey !important;
+
+    a {
+
+        &:hover {
+            background-color: @blue-grey !important;
+        }
+    }
+}
+
+
+//Footer
+
+footer {
+    .boxed;
+    min-height: @foot-height;
+    .offers_border;
+
+    p {
+        text-align: center;
+    }
+}
+
+
+// Mobile Menu
+#mobile_menu_button {
+    .boxed;
+    position: relative;
+    top: 10px;
+    color: @dark-grey;
+    background-color: @orange;
+    border: 1px solid @mobile-menu-border;
+    .offers_margin;
+    .element_height(@mobile-menu-height);
+    /*.element_height(@mobile-menu-height);*/
+    z-index: 1;
+
+    a {
+        line-height: 35px;
+        padding: 10px 200px;
+    }
+}
+
+.height_test {
+    display: inline-block;
+    .element_height(2.5);
+    .dev_border;
+}
+
+
+//Bootstrap BreakCrumbs
+/*.breadcrumb {
+  .boxed;
+  padding: 8px 15px;
+  margin-bottom: 0.2rem;
+  list-style: none;
+  background-color: white;
+  border-radius: 0.2rem;
+  > li {
+    display: inline-block;
+    &+li:before {
+      content: "/\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 5px;
+      color: blue;
+    }
+  }
+  > .active {
+    color: black;
+  }
+}*/
+
+
+//Bootstrap Breadcrumb origina and custom style
+
+
+
+
+
+.nav_breadcrumb {
+    background-color: @brown;
+    .element_height(1.8);
+    .dev_border;
+    width: 1050px;
+    
+    margin-bottom: @default-size-rem;
+    border-radius: 3px;
+
+
+    .breadcrumb {
+        .boxed;
+        .element_height(1.8);
+        display: inline-block;
+        width: 1000px;
+        padding: 1px 3px;
+        margin-bottom: @line-height-computed;
+        margin-left: @default-size-rem*0.3;
+        margin-top: 0;
+        list-style: none;
+        /*background-color: #fff;*/
+        border-radius: 0;
+        /*.breadcrumb_border;*/
+        > li {
+            display: inline-block;
+
+            & + li:before {
+                content: "/\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+                padding: 0 5px;
+                color: @redish;
+            }
+
+            >a {
+                text-decoration: none;
+                color: @ice;
+                
+
+                &:hover {
+                    color: @milky;
+                }
+            }
+        }
+
+        > .active {
+            color: @light-grey;
+        }
+    }
+}
+
+//Bootstrap Carousel.Less
+@import "carousel.less";
+
+
+.decor_breadcrumb_left {
+    .boxed;
+    display: inline-block;
+    .element_height(@default-size*1.4);
+    .element_width(@default-size*1.8);
+    background-color: @dark-brown;
+    border: 1px solid @milky;
+    border-radius: 4px;
+    float: left;
+    margin-left: @default-size-rem*0.4;
+    margin-top: @default-size-rem*0.2;
+}
+
+.decor_breadcrumb_right {
+    .boxed;
+    display: inline-block;
+    .element_height(@default-size*1.8);
+    .element_width(@default-size*2);
+    background-color: @dark-brown;
+    float: right;
+
+    div{
+        .boxed;
+        position: relative;
+        top: 2px;
+        right: -5px;
+        display: inline-block;
+        .element_height(@default-size*1.2);
+        .element_width(@default-size);
+        background-color: @brown;
+        border: 1px solid @milky;
+        border-radius: 3px; 
+    }
+}
